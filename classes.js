@@ -158,12 +158,12 @@ class Machine{
   }
   makeWidgets(num){
     this.widgets_made_count += num;
-    let fifties = 0;
-    for (let i = this.widgets_made_count; i > 0; i -= 50) {
-      if(i > -1)fifties ++;
+    this.wear_and_tear_count = Math.floor(this.widgets_made_count / 50);
+    // for (let i = this.widgets_made_count; i > 0; i -= 50) {
+    //   if(i > -1)fifties ++;
       
-    }
-    this.wear_and_tear_count = fifties;
+    // }
+    //  = fifties;
   }
 
   fixMachine(){
